@@ -5,6 +5,6 @@
       name: jl-acr-registry
     spec:
       interval: 120m
-      url: https://registry.tanzu.vmware.com/tanzu-sql-postgres
+      url: https://jltestcr.azurecr.io/vmware-postgres-operator
 
 
