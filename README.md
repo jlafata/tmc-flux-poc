@@ -42,3 +42,10 @@ Use these two directories to test Helm deployments with Flux:
 2. wordpress-helm - Bitnami Wordpress site + MariaDB deployment
 
 Please be aware, that this repository is not officially verified, tested or supported by VMware!
+
+
+# postgres helm chart
+1. update all the stuff in kube-postgres-helm folder 
+2. create regsecret and namespace holding it.
+3. add path 
+ to cluster using kustomize tab in tmc    --- how to automate all this   
