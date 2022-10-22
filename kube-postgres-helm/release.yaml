@@ -1,0 +1,43 @@
+---
+    apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    metadata:
+      name: kube-postgres
+    spec:
+      interval: 5m
+      chart:
+        spec:
+          version: "1.9.0"
+          chart: postgres-operator-chart
+          sourceRef:
+            kind: HelmRepository
+            name: tanzu-network-postgres
+          interval: 60m
+      install:
+        crds: Create
+      upgrade:
+        crds: CreateReplace
+      # https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml
+      values:
+        # specify the url for the docker image for the operator, e.g. gcr.io/<my_project>/postgres-operator
+        operatorImage: jltestcr.azurecr.io/vmware-postgres-operator/postgres-operator:v1.9.0
+        # specify the docker image for postgres instance, e.g. gcr.io/<my_project>/postgres-instance
+        postgresImage: jltestcr.azurecr.io/vmware-postgres-operator/postgres-instance:v1.9.0
+
+        # specify the name of the docker-registry secret to allow the cluster to authenticate with the container registry for pulling images
+        dockerRegistrySecretName: regsecret
+
+        # override the default self-signed cert-manager cluster issuer
+        certManagerClusterIssuerName: postgres-operator-ca-certificate-cluster-issuer
+
+        # set the resources for the postgres operator deployment
+        resources: {}
+        #  limits:
+        #    cpu: 100m
+        #    memory: 128Mi
+        #  requests:
+        #    cpu: 100m
+        #    memory: 128Mi
+
+        # enable security context for the postgres-operator deployment and the managed instances, typically deactivated on OpenShift clusters
+        enableSecurityContext: true

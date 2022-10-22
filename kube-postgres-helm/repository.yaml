@@ -1,0 +1,10 @@
+---
+    apiVersion: source.toolkit.fluxcd.io/v1beta2
+    kind: HelmRepository
+    metadata:
+      name: jl-acr-registry
+    spec:
+      interval: 120m
+      url: https://registry.tanzu.vmware.com/tanzu-sql-postgres
+
+
