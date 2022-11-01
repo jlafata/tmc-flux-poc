@@ -1,0 +1,25 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: tmc-flux-poc
+spec:
+  interval: 1m
+  url: https://github.com/jlafata/tmc-flux-poc.git
+  ref:
+    branch: master
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: tap-prod-accelerators
+  namespace: accelerator-system
+spec:
+#  dependsOn:
+#   - name: accelerators
+  interval: 5m0s
+  path: ./tap-prod-accelerators
+  prune: true
+  sourceReg:
+    kind: GitRepository
+    name: tmc-flux-poc
