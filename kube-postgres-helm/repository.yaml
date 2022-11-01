@@ -5,6 +5,8 @@
       name: jl-acr-registry
     spec:
       interval: 120m
-      url: https://jltestcr.azurecr.io/vmware-postgres-operator
+#      url: https://jltestcr.azurecr.io/vmware-postgres-operators
+      url: https://jltestcr.azurecr.io
+#      url: https://jltestcr.azurecr.io/vmware-postgres-operator/postgres-operator
 
 
