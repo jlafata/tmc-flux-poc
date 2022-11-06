@@ -20,6 +20,6 @@ spec:
   interval: 5m0s
   path: ./tap-prod-accelerators
   prune: true
-  sourceReg:
+  sourceRef:
     kind: GitRepository
     name: tmc-flux-poc
