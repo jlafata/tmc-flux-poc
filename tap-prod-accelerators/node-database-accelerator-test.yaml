@@ -2,12 +2,12 @@
 apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
 kind: Accelerator
 metadata:
-  name: start-spring-accelerator
+  name: node-database-accelerator-test
   namespace: accelerator-system
 spec:
   git:
     ref:
       branch: main
-    url: https://github.com/jlafata/start-spring-accelerator.git
+    url: https://github.com/jlafata/node-database-accelerator.git
     secretRef:
       name: git-secret
