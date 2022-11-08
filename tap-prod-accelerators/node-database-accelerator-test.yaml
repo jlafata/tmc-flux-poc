@@ -9,5 +9,5 @@ spec:
     ref:
       branch: main
     url: https://github.com/jlafata/node-database-accelerator.git
-    secretRef:
-      name: git-secret
+#    secretRef:
+#      name: git-secret
