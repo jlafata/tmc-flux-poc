@@ -17,6 +17,7 @@ spec:
 #      serviceAccountName: default
       containers:
       - name: nginx
-        image: harbor.morganstanley.com/library/nginx:new-lates
+#        image: harbor.morganstanley.com/library/nginx:new-lates
+        image: nginx
         ports:
         - containerPort: 80
