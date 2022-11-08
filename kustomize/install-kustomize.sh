@@ -1,3 +1,5 @@
+### install kustomize into a TAP installed cluster
+
 export INSTALL_NAMESPACE=pkg-install
 
 kapp deploy \
