@@ -7,7 +7,7 @@ metadata:
 spec:
   git:
     ref:
-      branch: main
+      branch: accelerators
     url: https://github.com/jlafata/spring-petclinic.git
 #    secretRef:
 #      name: git-secret
