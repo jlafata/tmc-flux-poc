@@ -1,0 +1,13 @@
+---
+apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+kind: ResourceClaimPolicy
+metadata:
+  name: postgres-cross-namespace
+# this must be the namespace where postgres operator is installed
+  namespace: postgres
+spec:
+  consumingNamespaces:
+    - '*' # consumable from all namespaces
+  subject:
+    group: sql.tanzu.vmware.com
+    kind: Postgres

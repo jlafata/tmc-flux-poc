@@ -1,16 +1,17 @@
+#!/bin/bash
 ### install kustomize into a TAP installed cluster
 
 export INSTALL_NAMESPACE=pkg-install
 
 kapp deploy \
   --app pkg-install-ns \
-  --file <(\
+  --file <( \
     kubectl create namespace $INSTALL_NAMESPACE \
       --dry-run=client \
       --output=yaml \
       --save-config \
     ) \
-  --yes 
+  --yes
 
 export KUSTOMIZE_VERSION='0.24.4+vmware.1-tkg.1'
 
