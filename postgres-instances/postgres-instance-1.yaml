@@ -3,7 +3,7 @@ apiVersion: sql.tanzu.vmware.com/v1
 kind: Postgres
 metadata:
   name: postgres-db-1
-  namespace: postgres-instance-1
+  namespace: postgres-instances
 spec:
   #
   # Global features
