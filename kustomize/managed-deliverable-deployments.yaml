@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: tmc-flux-poc
-  namespace: postgres-instances
+  namespace: dev-space
 spec:
   interval: 1m
   url: https://github.com/jlafata/tmc-flux-poc.git
