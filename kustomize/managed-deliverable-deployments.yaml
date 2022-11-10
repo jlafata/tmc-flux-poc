@@ -17,7 +17,7 @@ metadata:
   namespace: dev-space
 spec:
   interval: 5m0s
-  path: ./tap-prod-app-deployments
+  path: ./tap-demo-app-deployments
   prune: true
   sourceRef:
     kind: GitRepository
