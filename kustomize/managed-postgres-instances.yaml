@@ -16,8 +16,6 @@ metadata:
   name: postgres-instances
   namespace: postgres-instances
 spec:
-#  dependsOn:
-#   - name: accelerators
   interval: 5m0s
   path: ./tap-demo-postgres-instances
   prune: true
