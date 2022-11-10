@@ -1,6 +1,8 @@
 apiVersion: carto.run/v1alpha1
 kind: Deliverable
 metadata:
+  creationTimestamp: "2022-11-09T21:05:32Z"
+  generation: 1
   labels:
     app.kubernetes.io/component: deliverable
     app.kubernetes.io/part-of: spring-petclinic
@@ -15,6 +17,7 @@ metadata:
     carto.run/workload-namespace: dev-space
   name: spring-petclinic
   namespace: dev-space
+  resourceVersion: "4154858"
 spec:
   source:
     image: jltestcr.azurecr.io/tap-wkld/spring-petclinic-dev-space-bundle:3533094f-b762-41cc-a557-49498c5038ea
