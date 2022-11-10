@@ -18,7 +18,6 @@ metadata:
   name: spring-petclinic
   namespace: dev-space
   resourceVersion: "4154858"
-  uid: dfb78845-b0b8-4aaf-9990-b7febf24be9f
 spec:
   source:
     image: jltestcr.azurecr.io/tap-wkld/spring-petclinic-dev-space-bundle:3533094f-b762-41cc-a557-49498c5038ea
